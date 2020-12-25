@@ -1,0 +1,27 @@
+<launch>
+  <node pkg="dahua_stereo" type="dahua_stereo" name="dahua_stereo" output="screen" >
+    <param name="useROI" type="bool"  value="true" />
+    <param name="autoExposure" type="bool" value="true" />
+    <param name="setBalanceRatoio" type="bool" value="true" />
+    <param name="setGamma" type="bool" value="true" />
+    <param name="pubRecatify" type="bool" value="true" />
+    <param name="cameraTopicLeft" value="/camera/leftRaw" />
+    <param name="cameraTopicRight" value="/camera/rightRaw" />
+    <rosparam>
+        roiWidth: 2592
+        roiHeight: 2048
+        roiX: 0
+        roiY: 0
+        nWidth: 2592
+        nHeight: 2048
+        exposureTime: 40.0
+        balanceRatoioRed: 1.5
+        balanceRatoioGreen: 1.5
+        balanceRatoioBlue: 1.0
+        dGamma: 0.6
+        pubWidth: 1920
+        pubHeight: 768
+    </rosparam>
+  </node>
+</launch>
+
